@@ -1,0 +1,40 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 1000000;
+
+    &__wrapper{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 180px;
+    }
+
+    &__links{
+        display: flex;
+        gap: 40px;
+        font-family: $font-family-IBMLight;
+        font-size: 24px;
+    }
+
+    &__link{
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #fff;
+        p{
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+//Миксины//
+
+@import "mixin.scss";
+
+//Шрифты по умолчанию//
+
+@import "fonts.scss";
+
+$font-size: 14;
+
+$font-family-IBMBold: IBMBold;
+$font-family-IBMMedium: IBMMedium;
+$font-family-IBMLight: IBMLight;
+$font-family-IBMRegular: IBMRegular;
+
+//Переменные//
+$maxWidthContainer: 1920 * (3170/3560);
+$md1: 1365.98; 
+$md2: 991.98; 
+$md3: 767.98; 
+$md4: 479.98; 
+$mp1: 679.98;
+
+$maincolor: #fff;
+$bodyColor: #202020;
+$buttonGradient: linear-gradient(to bottom, #ff5c15, #ff7f48);
+
+//Обнуление//
+
+
+*{box-sizing: border-box;}
+html,body{font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;}
+input{padding: 0; margin: 0; border: 0; }
+input::-ms-clear{display: none;}
+input:focus{outline: none;}
+button {padding: 0;border: none;font: inherit;color: inherit;background-color: transparent;cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul{padding-inline-start: 0!important;margin: 0;}
+ul li {list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;margin: 0;}
+
+// Стили//
+
+html{
+    height: 100%;
+}
+
+canvas{
+    position: absolute;
+    background-color: $bodyColor;
+    
+    z-index: -1;
+}
+
+body{
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    
+    &.lock{
+        overflow: hidden;
+    }
+}  
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: $maxWidthContainer + px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+// Подключение остальных стилей //
+
+@import "header.scss";
+@import "content.scss";
+@import "help.scss";
+
+
+
